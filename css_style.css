@@ -266,5 +266,5 @@ $('#langSel').addEventListener('change', e => {
 .consent a:hover{text-decoration:underline}
 
 /* ---- hero typography tune ---- */
-.kicker.big{font-size:1.05rem;letter-spacing:.16em}
+.kicker.big{font-size:3.05rem;letter-spacing:.16em}
 .tagline{font-family:Fraunces,serif;font-weight:600;font-size:clamp(1.15rem,2.6vw,1.55rem);color:var(--saffron);margin:16px 0 10px}
