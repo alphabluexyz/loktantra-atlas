@@ -293,3 +293,6 @@ $('#langSel').addEventListener('change', e => {
 
 .issue-cite a{color:var(--saffron);margin-right:6px;text-decoration:none;border-bottom:1px dotted var(--saffron)}
 .issue-cite a:hover{border-bottom-style:solid}
+
+   a.brand, a.brand:visited{color:var(--ink);text-decoration:none;cursor:pointer}
+a.brand:hover{opacity:.85}
