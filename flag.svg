@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="r"><rect width="100" height="100" rx="14"/></clipPath>
+  </defs>
+  <g clip-path="url(#r)">
+    <!-- three bands -->
+    <rect width="100" height="100" fill="#ffffff"/>
+    <rect width="100" height="33.4" fill="#FF9933"/>
+    <rect y="66.6" width="100" height="33.4" fill="#138808"/>
+    <!-- Ashoka Chakra: 24 spokes as 12 lines -->
+    <g stroke="#000080" stroke-width="2.2">
+      <line x1="35"   y1="50"   x2="65"   y2="50"/>
+      <line x1="35.5" y1="46.1" x2="64.5" y2="53.9"/>
+      <line x1="37"   y1="42.5" x2="63"   y2="57.5"/>
+      <line x1="39.4" y1="39.4" x2="60.6" y2="60.6"/>
+      <line x1="42.5" y1="37"   x2="57.5" y2="63"/>
+      <line x1="46.1" y1="35.5" x2="53.9" y2="64.5"/>
+      <line x1="50"   y1="35"   x2="50"   y2="65"/>
+      <line x1="53.9" y1="35.5" x2="46.1" y2="64.5"/>
+      <line x1="57.5" y1="37"   x2="42.5" y2="63"/>
+      <line x1="60.6" y1="39.4" x2="39.4" y2="60.6"/>
+      <line x1="63"   y1="42.5" x2="37"   y2="57.5"/>
+      <line x1="64.5" y1="46.1" x2="35.5" y2="53.9"/>
+    </g>
+    <circle cx="50" cy="50" r="15" fill="none" stroke="#000080" stroke-width="3"/>
+    <circle cx="50" cy="50" r="2.6" fill="#000080"/>
+  </g>
+</svg>
