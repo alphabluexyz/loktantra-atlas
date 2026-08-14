@@ -297,3 +297,4 @@ $('#langSel').addEventListener('change', e => {
    nav{position:sticky;top:0;z-index:300}
 a.brand{pointer-events:auto;color:var(--ink);text-decoration:none}
 .orb,.chakra{pointer-events:none}
+   a.brand{cursor:pointer}
