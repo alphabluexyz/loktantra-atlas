@@ -268,3 +268,7 @@ $('#langSel').addEventListener('change', e => {
 /* ---- hero typography tune ---- */
 .kicker.big{font-size:2.05rem;letter-spacing:.16em}
 .tagline{font-family:Fraunces,serif;font-weight:600;font-size:clamp(1.15rem,2.6vw,1.55rem);color:var(--saffron);margin:16px 0 10px}
+
+   /* ---- footer note spacing ---- */
+.cookie-note{margin-top:6px;line-height:1.55}
+.cookie-note:first-of-type{margin-top:14px}
