@@ -375,3 +375,10 @@ if ($('#copyMail')){
     });
   });
 }
+
+document.addEventListener('click', function(e){
+  var b = e.target.closest('.brand');
+  if(!b) return;
+  var onHome = location.pathname.endsWith('/') || location.pathname.endsWith('index.html');
+  if(onHome){ e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}); }
+});
