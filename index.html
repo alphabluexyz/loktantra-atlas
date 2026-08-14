@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loktantra Atlas - Mapping Indian Political Thought</title>
+  <link rel="icon" type="image/svg+xml" href="flag.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css_style.css">
+</head>
+<body>
+
+<!-- ============ NAV (links are generated from NAV in js/data.js) ============ -->
+
+<nav>
+  <div class="brand">Loktantra<span>Atlas<img src="flag.svg" alt="Indian flag" width="18" height="18"></span></div>
+  <ul id="navLinks"></ul>
+  <div class="langwrap">
+    <span class="langicon">🌐</span>
+    <select id="langSel" aria-label="Translate this website">
+      <option value="">Language</option>
+      <option value="hi">हिन्दी</option>
+      <option value="en">English</option>
+      <option value="bn">বাংলা</option>
+      <option value="ta">தமிழ்</option>
+      <option value="te">తెలుగు</option>
+      <option value="mr">मराठी</option>
+      <option value="gu">ગુજરાતી</option>
+      <option value="kn">ಕನ್ನಡ</option>
+      <option value="ml">മലയാളം</option>
+      <option value="pa">ਪੰਜਾਬੀ</option>
+      <option value="ur">اردو</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="ru">Русский</option>
+      <option value="zh-CN">中文</option>
+      <option value="ar">العربية</option>
+    </select>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header>
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+  <svg class="chakra" viewBox="0 0 200 200" id="chakraSvg"></svg>
+  <div>
+    <div class="kicker">An interactive atlas of Indian political thought</div>
+    <h1>Where does everyone <span class="grad">stand</span>?</h1>
+    <p class="sub">Loktantra Atlas maps India's political parties and freedom-era thinkers across the debates like the state vs the market, faith vs the secular or the Centre vs the states, that continue to shape the republic. But no party is a single idea. Each is a bundle of positions. You may favour one party's free-market economics yet reject its cultural stance, or admire another's social vision while doubting its regulated economy. That tension isn't a flaw in you; it's the whole point. This atlas helps you think issue by issue and draw your own map</p>
+    <div class="cta">
+      <a class="btn p" href="#map">Explore the map</a>
+      <a class="btn s" href="#debates">Read the debates</a>
+      <a class="btn s" href="#donate">Support the project</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b id="stD">–</b><span>Core debates</span></div>
+      <div class="stat"><b id="stP">–</b><span>Parties mapped</span></div>
+      <div class="stat"><b id="stF">–</b><span>Freedom-era thinkers</span></div>
+      <div class="stat"><b>2</b><span>Axes · 4 quadrants</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ FRAMEWORK (theory context) ============ -->
+<section id="framework">
+  <div class="shead reveal">
+    <div class="kicker">01 · The Framework</div>
+    <h2>Why two axes, not one</h2>
+    <p>Indian politics is usually flattened onto a single line - left at one end, right at the
+      other. But one line cannot hold two very different questions at once: who should run the
+      economy, and how much should faith and tradition shape public life. Two parties can stand
+      together on markets and yet worlds apart on culture or the reverse. So instead of one
+      line, we use two crossing axes, turning a flat spectrum into a map. Every debate card and
+      every dot below is a point where these two questions meet.</p>
+  </div>
+
+  <div class="tgrid">
+    <div class="tcard reveal">
+      <span class="tag">Horizontal · X axis</span>
+      <h3>Left ↔ Right: the economy</h3>
+      <p>Who drives growth and welfare? One pole trusts the state - planning, subsidies, public
+        ownership, redistribution. The other trusts the market - competition, private enterprise,
+        open trade. Where a party sits here says who it believes should steer the economy.</p>
+    </div>
+    <div class="tcard reveal">
+      <span class="tag">Vertical · Y axis</span>
+      <h3>Up ↔ Down: culture &amp; faith</h3>
+      <p>How much should religion, heritage and tradition guide the state? One pole leans toward
+        public faith and majoritarian culture; the other toward secularism and social reform,
+        keeping the state an equal distance from every religion. This axis captures what the
+        economic line misses.</p>
+    </div>
+    <div class="tcard reveal">
+      <span class="tag">Putting it together</span>
+      <h3>How to read the map</h3>
+      <p>The six debates that follow are the raw arguments. We distil each party's stance across
+        them into two coordinates, placing it in one of four quadrants. So a dot is not a label —
+        it's a bundle of positions. Compare dots, not names, and the picture stops being about
+        teams and starts being about ideas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEBATES (cards rendered by app.js) ============ -->
+<section id="debates">
+  <div class="shead reveal">
+    <div class="kicker">02 · The Arguments</div>
+    <h2>Six debates that define the republic</h2>
+    <p>Every axis on the map below is built from these arguments, steel-manned for both sides.
+      The strip under each card shows where major parties lean on that specific question.</p>
+  </div>
+  <div class="legend debate-legend" id="debateLegend"></div>
+  <div class="dgrid" id="debateGrid"></div>
+</section>
+
+<!-- ============ THE MAP ============ -->
+<section id="map">
+  <div class="shead reveal">
+    <div class="kicker">03 · The Map</div>
+    <h2>The Indian political compass</h2>
+    <p>Left–right asks who runs the economy. Up–down asks how much tradition and faith
+      should shape public life. Hover any point for a preview; click to inspect.
+      Toggle layers to compare today's parties with the freedom movement's thinkers.</p>
+  </div>
+  <div class="mapwrap">
+    <div class="card mapbox reveal"><svg id="compass" viewBox="0 0 1000 1000"></svg></div>
+    <div class="panel">
+      <div class="card reveal" id="detail">
+        <h3>Inspect a point</h3>
+        <p>Click any circle (party) or diamond (freedom-era figure) on the compass to see its
+           position explained.</p>
+      </div>
+      <div class="card reveal">
+        <div class="togs" style="margin-bottom:14px">
+          <label class="tog"><input type="checkbox" id="tgP" checked> Parties (today)</label>
+          <label class="tog"><input type="checkbox" id="tgF" checked> Freedom-era figures</label>
+        </div>
+        <div class="legend" id="legend"></div>
+      </div>
+    </div>
+  </div>
+  <p class="method">Methodology: positions are simplified editorial estimates on −10…+10 axes, intended for
+     civic education, not definitive judgement. Living traditions resist any map. </p>
+</section>
+
+
+<section id="connect">
+  <div class="shead reveal">
+    <div class="kicker">04 · Connect</div>
+    <h2>Stay connected</h2>
+    <p>Get an email when we add new maps and debates — or just reach out and say hello.</p>
+  </div>
+
+  <div class="connect-card reveal">
+    <!-- Newsletter signup -->
+    <div class="newsletter">
+      <h3>Join the newsletter</h3>
+      <p class="nl-note" id="nlNote">Subscribe to a weekly newsletter exploring ideas across art, philosophy, religion, society, politics, and AI (with occasional project updates). Unsubscribe anytime.</p>
+     <form id="nlForm">
+  <div class="nl-row">
+    <input type="email" id="nlEmail" placeholder="Your email address" required>
+    <button type="submit" class="btn p">Subscribe</button>
+  </div>
+  <label class="consent">
+    <input type="checkbox" id="nlConsent" required>
+    <span>I agree to receive the weekly newsletter and understand I can unsubscribe anytime. See our <a href="privacy.html">Privacy Policy</a>.</span>
+  </label>
+</form>
+
+    </div>
+
+    <div class="connect-divider"></div>
+
+    <!-- Direct contact email -->
+    <div class="contact-line">
+      <span>Or write to us directly:</span>
+      <a id="contactMail" href="#" class="contact-email">connect@loktantraatlas.com</a>
+      <button class="copy-mail" id="copyMail">📋 Copy</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ DONATE ============ -->
+<section id="donate">
+ <div class="doncard reveal">
+  <div class="kicker">06 · Support</div>
+  <h2>Keep the Atlas independent</h2>
+  <p>Civics education works best when it's free, ad-free, and unaffiliated.
+     No party money, no paywalls - just readers like you.
+     Every contribution funds research, data updates, and hosting.</p>
+
+  <!-- Copy UPI ID (moved to top) -->
+  <div class="upi-copy-box">
+    <div class="upi-label">Pay directly to our UPI ID:</div>
+    <div class="upi-row">
+      <code class="upi-display" id="upiDisplay">your.upi@id</code>
+      <button class="copy-btn" id="copyBtn">📋 Copy</button>
+    </div>
+    <p class="upi-instruction">Copy the ID → Open your UPI app → Paste & Pay</p> 
+    <br>
+    <p class="upi-label"> Or You Can Scan The QR</p>
+  </div>
+
+  <!-- Amount Selection + QR (kept together as one unit) -->
+  <div class="amts" id="amts"></div>
+  <div class="custom">
+    <input type="number" id="amtIn" min="10" placeholder="Custom ₹">
+    <span class="custom-hint">Enter custom amount</span>
+  </div>
+
+  <div class="qrwrap">
+    <canvas id="qr"></canvas>
+    <p class="qrnote">Scan with any UPI app (amount auto-fills)</p>
+  </div>
+
+  <!-- Trust note -->
+  <p class="trustnote">Payments go directly to <b>Anany Shikhar</b>, the creator of Loktantra Atlas.
+     Every rupee funds hosting, data updates, and research. Thank you for keeping it free.</p>
+</div>
+</section>
+
+
+<footer>
+  Loktantra Atlas (v.01) - an educational, non-partisan Map Of Indian Political Thought. Positions shown are editorial estimates and do not
+  endorse or criticise any party or person.<br>Made with 🧡🤍💚 for the republic. <a href="privacy.html" style="color:var(--saffron)">Privacy Policy</a>
+</footer>
+
+<div id="tip"></div>
+
+<!-- data first, then logic -->
+<script src="qrious.min.js"></script>
+<script src="js_data.js"></script>
+<script src="js_app.js"></script>
+</body>
+</html>
