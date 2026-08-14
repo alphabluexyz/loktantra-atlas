@@ -26,11 +26,13 @@ const SITE = {
    To add a page: create the .html file (copy index.html),
    then add one line here, e.g. { label:'Method', href:'methods.html' } */
 const NAV = [
-  { label: 'Framework', href: 'index.html#framework' },   // ← new
-  { label: 'Debates', href: 'index.html#debates' },
-  { label: 'The Map', href: 'index.html#map' },
-  { label: 'Connect', href: 'index.html#connect' },
-  { label: 'Keep the Atlas independent', href: 'index.html#donate' }
+  { label: 'Framework', href: 'index.html#framework' },
+  { label: 'Debates',   href: 'index.html#debates' },
+  { label: 'The Map',   href: 'index.html#map' },
+  { label: 'The Issues',href: 'index.html#issues' },
+  { label: 'The Way Out',href:'index.html#solution' },
+  { label: 'Connect',   href: 'index.html#connect' },
+  { label: 'Support',   href: 'index.html#donate' }
 ];
 
 /* ---------- 3. MAP WORDING ----------
