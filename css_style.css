@@ -272,3 +272,8 @@ $('#langSel').addEventListener('change', e => {
    /* ---- footer note spacing ---- */
 .cookie-note{margin-top:6px;line-height:1.55}
 .cookie-note:first-of-type{margin-top:14px}
+
+   @media(max-width:640px){
+  .kdot{display:none}
+  .ken{display:block;margin-top:4px}
+}
