@@ -32,7 +32,7 @@ const NAV = [
   { label: 'The Issues',href: 'index.html#issues' },
   { label: 'The Way Out',href:'index.html#solution' },
   { label: 'Connect',   href: 'index.html#connect' },
-  { label: 'Support',   href: 'index.html#donate' }
+  { label: 'Keep the Atlas independent',   href: 'index.html#donate' }
 ];
 
 /* ---------- 3. MAP WORDING ----------
