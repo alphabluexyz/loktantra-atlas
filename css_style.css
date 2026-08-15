@@ -303,5 +303,7 @@ a.brand{pointer-events:auto;color:var(--ink);text-decoration:none}
 header{min-height:auto;align-items:flex-start;padding-top:56px;padding-bottom:72px}
 header .kicker{margin-top:0}
 
-.kicker.big .khi{font-size:1.2em;font-weight:700}
-.kicker.big .ken{font-size:.78em;font-weight:500;opacity:.7;letter-spacing:.16em}
+.kicker.big{line-height:1.3}
+.kicker.big .khi{display:block;font-size:1.2em;font-weight:700}
+.kicker.big .kdot{display:none}
+.kicker.big .ken{display:block;margin-top:6px;font-size:.72em;font-weight:500;opacity:.7;letter-spacing:.16em}
