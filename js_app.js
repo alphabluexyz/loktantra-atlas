@@ -382,3 +382,28 @@ document.addEventListener('click', function(e){
   var onHome = location.pathname.endsWith('/') || location.pathname.endsWith('index.html');
   if(onHome){ e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}); }
 });
+
+/* ---- fix: layer toggles hide names too ---- */
+(function(){
+  const pIds  = new Set(PARTIES.map(p=>p.id));   // BJP, INC, ...
+  const fNames= new Set(FIGURES.map(f=>f.s));    // Nehru, Gandhi, ...
+  function apply(){
+    const showP = $('#tgP').checked, showF = $('#tgF').checked;
+    document.querySelectorAll('#compass circle, #compass path, #compass polygon, #compass text').forEach(el=>{
+      if(el.tagName==='text'){
+        const t = el.textContent.trim();
+        if(pIds.has(t))      el.style.display = showP ? '' : 'none';
+        else if(fNames.has(t)) el.style.display = showF ? '' : 'none';
+      }
+      else if(el.tagName==='circle'){
+        el.style.display = showP ? '' : 'none';
+      }
+      else if((el.tagName==='path'||el.tagName==='polygon') && el.classList.contains('pt')){
+        el.style.display = showF ? '' : 'none';
+      }
+    });
+  }
+  $('#tgP').addEventListener('change', apply);
+  $('#tgF').addEventListener('change', apply);
+  apply();
+})();
