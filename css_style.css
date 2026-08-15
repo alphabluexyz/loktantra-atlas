@@ -298,3 +298,7 @@ $('#langSel').addEventListener('change', e => {
 a.brand{pointer-events:auto;color:var(--ink);text-decoration:none}
 .orb,.chakra{pointer-events:none}
    a.brand{cursor:pointer}
+
+   /* tighten gap between nav and hero's first line */
+header{min-height:auto;align-items:flex-start;padding-top:56px;padding-bottom:72px}
+header .kicker{margin-top:0}
