@@ -306,4 +306,4 @@ header .kicker{margin-top:0}
 .kicker.big{line-height:1.3}
 .kicker.big .khi{display:block;font-size:1.2em;font-weight:700}
 .kicker.big .kdot{display:none}
-.kicker.big .ken{display:block;margin-top:6px;font-size:.72em;font-weight:500;opacity:.7;letter-spacing:.16em}
+.kicker.big .ken{display:block;margin-top:6px;font-size:.72em;font-weight:500;opacity:1;letter-spacing:.16em}
