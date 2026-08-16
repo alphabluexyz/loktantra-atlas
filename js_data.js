@@ -31,8 +31,8 @@ const NAV = [
   { label: 'The Map',   href: 'index.html#map' },
   { label: 'The Issues',href: 'index.html#issues' },
   { label: 'The Way Out',href:'index.html#solution' },
-  { label: 'Connect',   href: 'index.html#connect' },
-  { label: 'Support a student',   href: 'index.html#donate' }
+  { label: 'Support a student',   href: 'index.html#donate' },
+  { label: 'Connect',   href: 'index.html#connect' }
 ];
 
 /* ---------- 3. MAP WORDING ----------
