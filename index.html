@@ -219,10 +219,44 @@
     <p class="sol-close">Whoever is in power works for you. Hold them to it. <em>अप्प दीपो भव:।</em></p>
   </div>
 </section>
+
+<!-- ============ DONATE ============ -->
+<section id="donate">
+ <div class="doncard reveal">
+  <div class="kicker">06 · Support</div>
+<h2>Support a student.</h2>
+  <p>Every contribution goes toward the education of underprivileged students - fees, books, and the tools to learn. The Atlas itself stays free, ad-free, and unaffiliated for everyone.</p>
+
+  <!-- Copy UPI ID (moved to top) -->
+  <div class="upi-copy-box">
+    <div class="upi-label">Pay directly to our UPI ID:</div>
+    <div class="upi-row">
+      <code class="upi-display" id="upiDisplay">your.upi@id</code>
+      <button class="copy-btn" id="copyBtn">📋 Copy</button>
+    </div>
+    <p class="upi-instruction">Copy the ID → Open your UPI app → Paste & Pay</p> 
+    <br>
+    <p class="upi-label"> Or You Can Scan The QR</p>
+  </div>
+
+  <!-- Amount Selection + QR (kept together as one unit) -->
+  <div class="amts" id="amts"></div>
+  <div class="custom">
+    <input type="number" id="amtIn" min="10" placeholder="Custom ₹">
+    <span class="custom-hint">Enter custom amount (min amount ₹10) </span>
+  </div>
+
+  <div class="qrwrap">
+    <canvas id="qr"></canvas>
+    <p class="qrnote">Scan with any UPI app (amount auto-fills)</p>
+  </div>
+
+
+
   
 <section id="connect">
   <div class="shead reveal">
-    <div class="kicker">06 · Connect</div>
+    <div class="kicker">07 · Connect</div>
     <h2>Stay connected</h2>
     <p>Subscribe to a weekly newsletter exploring ideas across art, philosophy, religion, society, politics, and AI (with occasional project updates). Unsubscribe anytime.</p>
   </div>
@@ -255,37 +289,6 @@
   </div>
 </section>
 
-
-<!-- ============ DONATE ============ -->
-<section id="donate">
- <div class="doncard reveal">
-  <div class="kicker">07 · Support</div>
-<h2>Support a student.</h2>
-  <p>Every contribution goes toward the education of underprivileged students - fees, books, and the tools to learn. The Atlas itself stays free, ad-free, and unaffiliated for everyone.</p>
-
-  <!-- Copy UPI ID (moved to top) -->
-  <div class="upi-copy-box">
-    <div class="upi-label">Pay directly to our UPI ID:</div>
-    <div class="upi-row">
-      <code class="upi-display" id="upiDisplay">your.upi@id</code>
-      <button class="copy-btn" id="copyBtn">📋 Copy</button>
-    </div>
-    <p class="upi-instruction">Copy the ID → Open your UPI app → Paste & Pay</p> 
-    <br>
-    <p class="upi-label"> Or You Can Scan The QR</p>
-  </div>
-
-  <!-- Amount Selection + QR (kept together as one unit) -->
-  <div class="amts" id="amts"></div>
-  <div class="custom">
-    <input type="number" id="amtIn" min="10" placeholder="Custom ₹">
-    <span class="custom-hint">Enter custom amount (min amount ₹10) </span>
-  </div>
-
-  <div class="qrwrap">
-    <canvas id="qr"></canvas>
-    <p class="qrnote">Scan with any UPI app (amount auto-fills)</p>
-  </div>
 
   <!-- Trust note -->
  <p class="trustnote">Every rupee funds the education of underprivileged students. A periodic audit report will be uploaded on this website itself. Payments go directly to <b>Anany Shikhar</b>. Thank you.</p>
